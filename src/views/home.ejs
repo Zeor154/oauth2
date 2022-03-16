@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="menu-bar">
+        <div class="group">
+          <a class="item title">It Title</a>
+        </div>
+        <div class="group">
+            <% if(user && user.id) { %>
+                <a class="item funny" href="/dash" style="transition: 0.8s ease-in-out; text-decoration: none; border: 2px solid red; border-radius: 15px;">Dashboard</a>
+            <% }else { %>
+                <a class="item funny" onclick="Javascript()" href="/auth" style="transition: 0.8s ease-in-out; text-decoration: none; border: 2px solid red; border-radius: 15px;">Login</a>
+            <% }%>
+        </div>
+      </nav>
+
+    <p class="titlelol">Home</p>
+    <p class="description">I use <a class="descriptionlink" target="blank" href="https://passportjs.org">Passportjs</a> to register passsport login.</p>
+    <p class="description"><a class="descriptionlink" target="blank" href="https://expressjs.org">Expressjs</a> is a web server It can custom the <p class="description">router to load any page.</p></p>
+    <p class="description"><a class="descriptionlink" href="https://mongodb.con">Mongodb</a> It's a database repository. of the user </p>
+    <p class="description">or another.</p>
+    <!-- <a class="link" href="/auth" onclick="Javascript()">Login with discord</a> -->
+</body>
+
+<script>
+    function Javascript() {
+        const newwin = window.open('/auth', 'window', "width=500% height=600%")
+        newwin.close()
+    }
+</script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+    .description{
+        color: white;
+        font-size: 17px;
+        margin-top: 10px;
+    }
+    .descriptionlink{
+        color: orange;
+        text-decoration: none;
+    }
+    .funny:hover{
+        background: url('https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center no-repeat;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Be Vietnam Pro';
+        background-color: #282828;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .titlelol{
+        color: white;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .link{
+        margin-top: 10px;
+        background-color: orange;
+        padding: 1rem 1.3rem;
+        border-radius: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 0.8s ease-in-out;
+    }
+    .link:hover{
+        background-color: darkcyan;
+    }
+
+    .menu-bar {
+        margin-top: 15px;
+  background-color: #1988f7;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.item {
+    margin-right: 5px;
+  color: white;
+  background-color: transparent;
+  font-size: 18px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+.item.title {
+  font-weight: 600;
+}
+
+.item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+</style>
+</html>

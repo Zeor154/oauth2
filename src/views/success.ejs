@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - login</title>
+</head>
+<body>
+</body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+  icon: 'success',
+  title: 'Welcome <%- user.username %>',
+  timer: 2000
+})
+
+    setTimeout(() => {
+        window.location.replace('/dash');
+    }, 2000)
+</script>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+    *{
+    margin: 0;
+        padding: 0;
+        /* background-color: #282828; */
+        font-family: 'Be Vietnam Pro';
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        margin-top: 30px;
+        color: white;
+        font-size: 25px;
+    }
+</style>
+</html>

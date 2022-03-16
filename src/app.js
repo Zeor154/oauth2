@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname + '/views'))
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: 'mongodb+srv://myuser:<password>@cluster0.5s0n3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+        mongoUrl: 'mongodb+srv://myuser:userman12@cluster0.5s0n3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 '
     }),
     secret: 'some random secret',

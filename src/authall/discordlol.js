@@ -12,9 +12,9 @@ passport.deserializeUser(async(id, done) => {
 })
 
 passport.use(new Strategy({
-    clientID: '942765299621580841',
-    clientSecret: 'DQm30yXRf77adnca-CA2il0BjaX6jhWc',
-    callbackURL: 'http://pungpound.xyz:3000/auth/redirect',
+    clientID: '',
+    clientSecret: '',
+    callbackURL: '',
     scope: ['identify']
 }, async(accessToken, refreshToken, profile, done) => {
     try {
